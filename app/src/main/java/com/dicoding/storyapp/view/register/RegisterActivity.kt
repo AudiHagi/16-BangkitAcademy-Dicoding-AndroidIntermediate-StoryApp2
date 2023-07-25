@@ -156,12 +156,15 @@ class RegisterActivity : AppCompatActivity() {
                 name.isEmpty() -> {
                     registerBinding.errorName.text = getString(R.string.insert_name)
                 }
+
                 email.isEmpty() -> {
                     registerBinding.errorEmail.text = getString(R.string.insert_email)
                 }
+
                 password.isEmpty() -> {
                     registerBinding.errorPass.text = getString(R.string.insert_pass)
                 }
+
                 else -> {
                     if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(
                             name
@@ -196,6 +199,7 @@ class RegisterActivity : AppCompatActivity() {
                         is Result.Loading -> {
                             showLoading(true)
                         }
+
                         is Result.Error -> {
                             showLoading(false)
                             showAlert(
@@ -204,6 +208,7 @@ class RegisterActivity : AppCompatActivity() {
                             )
                             { }
                         }
+
                         is Result.Success -> {
                             showLoading(false)
                             registerSuccess()

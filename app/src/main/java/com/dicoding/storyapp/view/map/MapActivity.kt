@@ -24,7 +24,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.LatLngBounds
 import com.google.android.gms.maps.model.MapStyleOptions
 import com.google.android.gms.maps.model.MarkerOptions
-import java.util.*
+import java.util.TimeZone
 
 class MapActivity : AppCompatActivity(), OnMapReadyCallback {
     private lateinit var mMap: GoogleMap
@@ -96,18 +96,22 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 mMap.mapType = GoogleMap.MAP_TYPE_NORMAL
                 true
             }
+
             R.id.satellite_type -> {
                 mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
                 true
             }
+
             R.id.terrain_type -> {
                 mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
                 true
             }
+
             R.id.hybrid_type -> {
                 mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
                 true
             }
+
             else -> {
                 super.onOptionsItemSelected(item)
             }
@@ -121,9 +125,11 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         showMarker(result.data.listStory, googleMap, this)

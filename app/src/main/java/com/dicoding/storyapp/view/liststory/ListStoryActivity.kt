@@ -65,10 +65,12 @@ class ListStoryActivity : AppCompatActivity() {
                 val moveToAccount = Intent(this@ListStoryActivity, AccountActivity::class.java)
                 startActivity(moveToAccount)
             }
+
             R.id.menu_maps -> {
                 val moveToMap = Intent(this@ListStoryActivity, MapActivity::class.java)
                 startActivity(moveToMap)
             }
+
             R.id.menu_refresh -> {
                 showLoading(true)
                 getData()

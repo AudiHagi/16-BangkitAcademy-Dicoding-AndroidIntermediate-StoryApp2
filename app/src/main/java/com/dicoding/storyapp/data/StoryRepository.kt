@@ -11,7 +11,11 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import androidx.paging.liveData
-import com.dicoding.storyapp.data.remote.response.*
+import com.dicoding.storyapp.data.remote.response.InsertStoryResponse
+import com.dicoding.storyapp.data.remote.response.LoginResponse
+import com.dicoding.storyapp.data.remote.response.RegisterResponse
+import com.dicoding.storyapp.data.remote.response.Story
+import com.dicoding.storyapp.data.remote.response.StoryResponse
 import com.dicoding.storyapp.data.remote.retrofit.ApiConfig
 import com.dicoding.storyapp.data.remote.retrofit.ApiService
 import com.dicoding.storyapp.view.login.LoginPreferences

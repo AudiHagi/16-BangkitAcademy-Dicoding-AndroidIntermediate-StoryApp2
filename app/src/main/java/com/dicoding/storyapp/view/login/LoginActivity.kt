@@ -141,9 +141,11 @@ class LoginActivity : AppCompatActivity() {
                 email.isEmpty() -> {
                     loginBinding.errorEmail.text = getString(R.string.insert_email)
                 }
+
                 password.isEmpty() -> {
                     loginBinding.errorPass.text = getString(R.string.insert_pass)
                 }
+
                 else -> {
                     if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
                         if (passwordValidation(password) && emailValidation(email)) {
@@ -174,6 +176,7 @@ class LoginActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         showAlert(
@@ -182,6 +185,7 @@ class LoginActivity : AppCompatActivity() {
                         )
                         { }
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         loginSuccess(result.data)

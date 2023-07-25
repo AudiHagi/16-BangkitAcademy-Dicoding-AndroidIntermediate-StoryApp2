@@ -15,7 +15,7 @@ import com.dicoding.storyapp.data.remote.response.Story
 import com.dicoding.storyapp.databinding.ItemStoryBinding
 import com.dicoding.storyapp.utils.DateFormatter
 import com.dicoding.storyapp.view.detailstory.DetailStoryActivity
-import java.util.*
+import java.util.TimeZone
 
 class ListStoryAdapter :
     PagingDataAdapter<Story, ListStoryAdapter.ListViewHolder>(DIFF_CALLBACK) {

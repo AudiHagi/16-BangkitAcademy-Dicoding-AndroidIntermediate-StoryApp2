@@ -92,9 +92,11 @@ class InsertStoryActivity : AppCompatActivity() {
                 permissions[Manifest.permission.ACCESS_FINE_LOCATION] ?: false -> {
                     myLocation()
                 }
+
                 permissions[Manifest.permission.ACCESS_COARSE_LOCATION] ?: false -> {
                     myLocation()
                 }
+
                 permissions[Manifest.permission.CAMERA] ?: false -> {}
                 permissions[Manifest.permission.READ_EXTERNAL_STORAGE] ?: false -> {}
                 else -> {
@@ -258,6 +260,7 @@ class InsertStoryActivity : AppCompatActivity() {
                     is Result.Loading -> {
                         showLoading(true)
                     }
+
                     is Result.Error -> {
                         showLoading(false)
                         showAlert(
@@ -266,6 +269,7 @@ class InsertStoryActivity : AppCompatActivity() {
                         )
                         { }
                     }
+
                     is Result.Success -> {
                         showLoading(false)
                         postSuccess()

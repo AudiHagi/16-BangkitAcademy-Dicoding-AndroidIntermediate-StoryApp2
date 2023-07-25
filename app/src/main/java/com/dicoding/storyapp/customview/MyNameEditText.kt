@@ -92,6 +92,7 @@ class MyNameEditText : AppCompatEditText, View.OnTouchListener {
                         showClearButton()
                         return true
                     }
+
                     MotionEvent.ACTION_UP -> {
                         clearButtonImage = ContextCompat.getDrawable(
                             context,
@@ -103,6 +104,7 @@ class MyNameEditText : AppCompatEditText, View.OnTouchListener {
                         hideClearButton()
                         return true
                     }
+
                     else -> return false
                 }
             } else return false

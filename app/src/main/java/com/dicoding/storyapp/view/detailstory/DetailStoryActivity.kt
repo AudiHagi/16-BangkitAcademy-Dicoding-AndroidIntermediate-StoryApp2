@@ -10,7 +10,7 @@ import com.dicoding.storyapp.R
 import com.dicoding.storyapp.databinding.ActivityDetailStoryBinding
 import com.dicoding.storyapp.utils.DateFormatter
 import com.dicoding.storyapp.view.detailmap.DetailMapActivity
-import java.util.*
+import java.util.TimeZone
 
 class DetailStoryActivity : AppCompatActivity() {
     private lateinit var detailBinding: ActivityDetailStoryBinding

@@ -9,9 +9,13 @@ import android.net.Uri
 import android.os.Environment
 import android.text.TextUtils
 import android.util.Patterns
-import java.io.*
+import java.io.ByteArrayOutputStream
+import java.io.File
+import java.io.FileOutputStream
+import java.io.InputStream
+import java.io.OutputStream
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 
 private const val FILENAME_FORMAT = "dd-MMM-yyyy"
 
